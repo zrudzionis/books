@@ -1,55 +1,9 @@
 # Clean Code: A Handbook of Agile Software Craftsmanship
 
-Meaningful names
-Functions
-Comments
-
-
-
-<details>
-  <summary>Comments</summary>
-  <p>
-
-- Good comments:
-    - Legal
-    - Informative
-    - Explanation of intent
-    - Clarification
-    - Warning of consequences
-    - TODO
-    - Aplification of importance
-    - Javadocs in public APIs
-- Bad comments:
-    - Mumbling
-    - Redundant
-    - Misleading
-    - Mandated
-    - Journal comments
-    - Noise comments
-    - Position marker comments
-    - Closing brace comments
-    - Attributions and bylines
-    - Commented-out code
-    - HTML comments
-    - Containing nonlocal information
-    - Containing too much information
-    - Inobvious connection to code
-    - In function headers (short functions don't need them)
-    - Javadoc in nonpublic code
-- Comments rot faster than code
-- Comments should be used to communicate intent
-- Don't use comment when you can use function or a variable
-
-  </p>
-</details>
-
-
-
-<details>
-  <summary></summary>
-  <p>
-  </p>
-</details>
-
-
-
+1. Clean code
+2. [Meaningful names](https://github.com/zrudzionis/books/blob/master/clean-code/meaningful-names.md)
+3. [Functions](https://github.com/zrudzionis/books/blob/master/clean-code/functions.md)
+4. [Comments](https://github.com/zrudzionis/books/blob/master/clean-code/comments.md)
+5. [Formatting](https://github.com/zrudzionis/books/blob/master/clean-code/formatting.md)
+6. [Objects and data structures](https://github.com/zrudzionis/books/blob/master/clean-code/objects-and-data-structures.md)
+7. [Error handling](https://github.com/zrudzionis/books/blob/master/clean-code/error-handling.md)
