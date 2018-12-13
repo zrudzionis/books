@@ -19,4 +19,4 @@
 - Use solution domain names
 - Use problem domain names
 - Add meaningful context
-- Don't add redundant context0
+- Don't add redundant context
