@@ -9,6 +9,6 @@
 - Define exceptions in terms of a caller's needs (how they are caught) i.e.: throw one exception instead of many different ones
 - Wrap third-party exceptions
 - Define normal flow
-- Use [Special Case Pattern] (https://martinfowler.com/eaaCatalog/specialCase.html) (Fowler) to handle special cases
+- Use [Special Case Pattern](https://martinfowler.com/eaaCatalog/specialCase.html) (Fowler) to handle special cases
 - Don't return null
 - Don't pass null
