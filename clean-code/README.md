@@ -7,3 +7,6 @@
 5. [Formatting](formatting.md)
 6. [Objects and data structures](objects-and-data-structures.md)
 7. [Error handling](error-handling.md)
+8. [Boundaries](boundaries.md)
+9. [Unit tests](unit-tests.md)
+10. [Classes](classes.md)
