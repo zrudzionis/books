@@ -1,7 +1,7 @@
 # Systems
 
 - Software systems should separate the startup process, when the application objects are constructed and the 
-dependencies are "wired" together, from the runtime logic that takes over after startup.
+dependencies are "wired" together, from the runtime logic that takes over after startup
 - Direction of dependencies should point away from main
 - Abstract Factory Pattern can be used to create instances
 - Dependency Injection can be used to avoid instantiation of objects
