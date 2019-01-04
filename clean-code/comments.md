@@ -1,0 +1,32 @@
+# Comments
+
+- Comments rot faster than code
+- Comments should be used to communicate intent
+- Don't use comment when you can use function or a variable
+- Good comments:
+    - Legal
+    - Informative
+    - Explanation of intent
+    - Clarification
+    - Warning of consequences
+    - TODO
+    - Aplification of importance
+    - Javadocs in public APIs
+- Bad comments:
+    - Mumbling
+    - Redundant
+    - Misleading
+    - Mandated
+    - Journal comments
+    - Noise comments
+    - Position marker comments
+    - Closing brace comments
+    - Attributions and bylines
+    - Commented-out code
+    - HTML comments
+    - Containing nonlocal information
+    - Containing too much information
+    - Inobvious connection to code
+    - In function headers (short functions don't need them)
+    - Javadoc in nonpublic code
+  
