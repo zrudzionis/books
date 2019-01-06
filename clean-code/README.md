@@ -13,3 +13,7 @@
 11. [Systems](systems.md)
 12. [Emergence](emergence.md)
 12. [Concurrency](concurrency.md)
+13. Successive Refinement
+14. JUnit Internals
+15. Refactoring SerialDate
+16. [Smells and Heuristics](smells-and-heuristics.md) 
