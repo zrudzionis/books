@@ -48,7 +48,6 @@ class WasRun(TestCase):
     def tear_down(self):
         self.log += 'tear_down '
 
-    # TODO do we need it ?
     def test_method(self):
         self.was_run = True
         self.log += 'test_method '
