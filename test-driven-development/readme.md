@@ -11,8 +11,5 @@ Example [code](xunit.py)
 - [Test-Driven Development Patterns](test-driven-development-patterns.md)
 - [Red Bar Patterns](red-bar-patterns.md)
 - [Testing Patterns](testing-patterns.md)
- 
- 
- 
- 
+- [Green Bar Patterns](green-bar-patterns.md)
  
