@@ -13,4 +13,4 @@ Example [code](xunit.py)
 - [Testing Patterns](testing-patterns.md)
 - [Green Bar Patterns](green-bar-patterns.md)
 - [xUnit Patterns](xunit-patterns.md)
- 
+- [Design Patterns](design-patterns.md)
