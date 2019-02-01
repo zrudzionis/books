@@ -15,6 +15,6 @@
 - In horizontal formatting use white space to associate things that are strongly related and dissociate 
 things that are more weakly related i.e.: 2*3 + 1 or foo(1, 2) over foo (1,2)
 - Horizontal alignment not recommended
-- One new identation level per one new block
+- One new indentation level per one new block
 - Make dummy scopes visible i.e.: indented while(f.read() != -1) { } over while(f.read() != -1);
 - Make sure your team agrees on formatting convention
