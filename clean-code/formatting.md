@@ -3,8 +3,8 @@
 - Formatting should be done continuously
 - Files should be below 500 lines
 - Files should be read top to bottom from high level to low level details (including file name)
-- Different concepts should be seprated by empty lines i.e.: build-in imports, third-party package imports, our code imports
-- Lines of code that are tightly related shoud appear vertically dense
+- Different concepts should be separated by empty lines i.e.: build-in imports, third-party package imports, our code imports
+- Lines of code that are tightly related should appear vertically dense
 - Closely related concepts should be kept vertically close
 - Variables should be declared close to their usage
 - Instance variable should be declared at the top of the class
