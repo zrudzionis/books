@@ -1,6 +1,6 @@
 # Objects and data structures
 
-- Procedural (code using data structures) makes it easy to add new functions wihout changing the existing data structures
+- Procedural (code using data structures) makes it easy to add new functions without changing the existing data structures
 - OO code makes it easy to add new classes without changing existing functions
 - Procedural code makes it hard to add new data structures because all the functions must change
 - OO code makes it hard to add new functions because all the classes must change
