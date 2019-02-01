@@ -1,4 +1,4 @@
-# Clean Code: A Handbook of Agile Software Craftsmanship
+# Clean Code: A Handbook of Agile Software Craftsmanship by Robert C. Martin 
 
 1. Clean code
 2. [Meaningful names](meaningful-names.md)
