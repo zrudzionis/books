@@ -8,7 +8,7 @@ Money rounding?
 hashCode()
 equal None
 equal other object
-5 CHF * 2 = 10 CHF
+    5 CHF * 2 = 10 CHF
 """
 
 from unittest import TestCase
