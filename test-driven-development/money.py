@@ -42,14 +42,12 @@ class Money(object):
 
 class Dollar(Money):
     def times(self, multiplier):
-        # return Money(self.amount * multiplier, 'USD')
-        return Money.dollar(self.amount * multiplier)
+        return Money(self.amount * multiplier, 'USD')
 
 
 class Franc(Money):
     def times(self, multiplier):
-        # return Money(self.amount * multiplier, 'CHF')
-        return Money.franc(self.amount * multiplier)
+        return Money(self.amount * multiplier, 'CHF')
 
 
 class MoneyTestCase(TestCase):
