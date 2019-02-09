@@ -1,6 +1,6 @@
 """
 $5 + 10 CHF = $10 if rate is 2:1
-$5 * 2 = $10
+    $5 * 2 = $10
 Make "amount" private
 Dollar side-effects?
 Money rounding?
@@ -11,10 +11,10 @@ from unittest import TestCase
 
 class Dollar(object):
     def __init__(self, amount):
-        self.amount = 10
+        self.amount = amount
 
     def times(self, multiplier):
-        pass
+        self.amount *= multiplier
 
 
 class MoneyTestCase(TestCase):
