@@ -2,7 +2,7 @@
 $5 + 10 CHF = $10 if rate is 2:1
     $5 * 2 = $10
 Make "amount" private
-Dollar side-effects?
+    Dollar side-effects?
 Money rounding?
 """
 
@@ -14,8 +14,7 @@ class Dollar(object):
         self.amount = amount
 
     def times(self, multiplier):
-        self.amount *= multiplier
-        return None
+        return Dollar(self.amount * multiplier)
 
 
 class MoneyTestCase(TestCase):
