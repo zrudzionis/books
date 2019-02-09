@@ -63,3 +63,7 @@ class MoneyTestCase(TestCase):
         self.assertTrue(Franc(5) == Franc(5))
         self.assertFalse(Franc(5) == Franc(6))
         self.assertFalse(Money.dollar(5) == Franc(5))
+
+    def test_currency(self):
+        self.assertEqual(Money.dollar(1).currency(), 'USD')
+        self.assertEqual(Money.franc(1).currency(), 'CHF')
