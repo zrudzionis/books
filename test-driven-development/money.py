@@ -52,3 +52,4 @@ class MoneyTestCase(TestCase):
         self.assertFalse(Dollar(5) == Dollar(6))
         self.assertTrue(Franc(5) == Franc(5))
         self.assertFalse(Franc(5) == Franc(6))
+        self.assertFalse(Dollar(5) == Franc(5))
