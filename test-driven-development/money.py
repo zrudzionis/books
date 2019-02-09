@@ -12,6 +12,7 @@ equal other object
     Dollar/Franc duplication
     Common equals
 Common times
+Compare Francs with Dollars
 """
 
 from unittest import TestCase
