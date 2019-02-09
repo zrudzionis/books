@@ -28,6 +28,9 @@ class Money(object):
     def currency(self):
         return self.currency_code
 
+    def times(self, multiplier):
+        return Money(self.amount * multiplier, self.currency_code)
+
     def __eq__(self, other):
         return self.amount == other.amount and self.currency_code == other.currency_code
 
@@ -41,13 +44,11 @@ class Money(object):
 
 
 class Dollar(Money):
-    def times(self, multiplier):
-        return Money(self.amount * multiplier, 'USD')
+    pass
 
 
 class Franc(Money):
-    def times(self, multiplier):
-        return Money(self.amount * multiplier, 'CHF')
+    pass
 
 
 class MoneyTestCase(TestCase):
