@@ -22,3 +22,5 @@ class MoneyTestCase(TestCase):
         five = Dollar(5)
         five.times(2)
         self.assertEqual(five.amount, 10)
+        five.times(3)
+        self.assertEqual(five.amount, 15)
