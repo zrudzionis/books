@@ -14,26 +14,22 @@ equal other object
 from unittest import TestCase
 
 
-class Dollar(object):
+class Money(object):
     def __init__(self, amount):
         self.amount = amount
-
-    def times(self, multiplier):
-        return Dollar(self.amount * multiplier)
 
     def __eq__(self, other):
         return self.amount == other.amount
 
 
-class Franc(object):
-    def __init__(self, amount):
-        self.amount = amount
-
+class Dollar(Money):
     def times(self, multiplier):
         return Dollar(self.amount * multiplier)
 
-    def __eq__(self, other):
-        return self.amount == other.amount
+
+class Franc(Money):
+    def times(self, multiplier):
+        return Dollar(self.amount * multiplier)
 
 
 class MoneyTestCase(TestCase):
