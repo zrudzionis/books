@@ -14,6 +14,7 @@ Dollar/Franc duplication
 Common times
     Compare Francs with Dollars
 Currency?
+Delete test_franc_multiplication?
 """
 
 from unittest import TestCase
