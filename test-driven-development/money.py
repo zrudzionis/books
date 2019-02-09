@@ -21,9 +21,12 @@ from unittest import TestCase
 
 
 class Money(object):
-    def __init__(self, amount):
+    def __init__(self, amount, currency_code):
         self.amount = amount
-        self.currency_code = None
+        self.currency_code = currency_code
+
+    def currency(self):
+        return self.currency_code
 
     def __eq__(self, other):
         return self.amount == other.amount and self.__class__ == other.__class__
@@ -39,11 +42,7 @@ class Money(object):
 
 class Dollar(Money):
     def __init__(self, amount):
-        super(Dollar, self).__init__(amount)
-        self.currency_code = 'USD'
-
-    def currency(self):
-        return self.currency_code
+        super(Dollar, self).__init__(amount, 'USD')
 
     def times(self, multiplier):
         return Dollar(self.amount * multiplier)
@@ -51,11 +50,7 @@ class Dollar(Money):
 
 class Franc(Money):
     def __init__(self, amount):
-        super(Franc, self).__init__(amount)
-        self.currency_code = 'CHF'
-
-    def currency(self):
-        return self.currency_code
+        super(Franc, self).__init__(amount, 'CHF')
 
     def times(self, multiplier):
         return Franc(self.amount * multiplier)
