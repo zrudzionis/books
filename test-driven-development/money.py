@@ -9,6 +9,9 @@ hashCode()
 equal None
 equal other object
     5 CHF * 2 = 10 CHF
+    Dollar/Franc duplication
+    Common equals
+Common times
 """
 
 from unittest import TestCase
@@ -46,3 +49,5 @@ class MoneyTestCase(TestCase):
     def test_equality(self):
         self.assertTrue(Dollar(5) == Dollar(5))
         self.assertFalse(Dollar(5) == Dollar(6))
+        self.assertTrue(Franc(5) == Franc(5))
+        self.assertFalse(Franc(5) == Franc(6))
