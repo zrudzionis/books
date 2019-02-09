@@ -11,7 +11,7 @@ equal other object
     5 CHF * 2 = 10 CHF
 -----------> Dollar/Franc duplication
     Common equals
-Common times
+    Common times
     Compare Francs with Dollars
     Currency?
 Delete test_franc_multiplication?
