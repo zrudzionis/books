@@ -1,7 +1,7 @@
 """
 $5 + 10 CHF = $10 if rate is 2:1
     $5 * 2 = $10
-Make "amount" private
+    Make "amount" private
     Dollar side-effects?
 Money rounding?
     equals()
@@ -27,10 +27,8 @@ class Dollar(object):
 class MoneyTestCase(TestCase):
     def test_multiplication(self):
         five = Dollar(5)
-        product = five.times(2)
-        self.assertEqual(product.amount, 10)
-        product = five.times(3)
-        self.assertEqual(product.amount, 15)
+        self.assertEqual(five.times(2), Dollar(10))
+        self.assertEqual(five.times(3), Dollar(15))
 
     def test_equality(self):
         self.assertTrue(Dollar(5) == Dollar(5))
