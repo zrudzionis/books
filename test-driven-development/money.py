@@ -32,7 +32,7 @@ class Money(object):
 
     @staticmethod
     def franc(amount):
-        return Dollar(amount)
+        return Franc(amount)
 
 
 class Dollar(Money):
