@@ -25,6 +25,17 @@ class Dollar(object):
         return self.amount == other.amount
 
 
+class Franc(object):
+    def __init__(self, amount):
+        self.amount = amount
+
+    def times(self, multiplier):
+        return Dollar(self.amount * multiplier)
+
+    def __eq__(self, other):
+        return self.amount == other.amount
+
+
 class MoneyTestCase(TestCase):
     def test_multiplication(self):
         five = Dollar(5)
