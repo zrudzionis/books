@@ -21,7 +21,7 @@ class Dollar(object):
         return Dollar(self.amount * multiplier)
 
     def __eq__(self, other):
-        return self.amount == getattr(other, 'amount', None)
+        return self.amount == other.amount
 
 
 class MoneyTestCase(TestCase):
@@ -35,4 +35,3 @@ class MoneyTestCase(TestCase):
     def test_equality(self):
         self.assertTrue(Dollar(5) == Dollar(5))
         self.assertFalse(Dollar(5) == Dollar(6))
-        self.assertFalse(Dollar(5) == dict())
