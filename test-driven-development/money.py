@@ -6,6 +6,8 @@ Make "amount" private
 Money rounding?
     equals()
 hashCode()
+equal None
+equal other object
 """
 
 from unittest import TestCase
