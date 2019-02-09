@@ -12,7 +12,7 @@ equal other object
     Dollar/Franc duplication
     Common equals
 Common times
-Compare Francs with Dollars
+    Compare Francs with Dollars
 """
 
 from unittest import TestCase
@@ -23,7 +23,7 @@ class Money(object):
         self.amount = amount
 
     def __eq__(self, other):
-        return self.amount == other.amount
+        return self.amount == other.amount and self.__class__ == other.__class__
 
 
 class Dollar(Money):
