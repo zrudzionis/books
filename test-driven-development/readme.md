@@ -3,6 +3,7 @@
 [Preface](preface.md)
 
 ## The Money Example
+Example [code](money.py)
 
 ## The xUnit Example
 Example [code](xunit.py)
