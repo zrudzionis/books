@@ -48,9 +48,9 @@ class MoneyTestCase(TestCase):
         self.assertEqual(five.times(3), Money.dollar(15))
 
     def test_franc_multiplication(self):
-        five = Franc(5)
-        self.assertEqual(five.times(2), Franc(10))
-        self.assertEqual(five.times(3), Franc(15))
+        five = Money.franc(5)
+        self.assertEqual(five.times(2), Money.franc(10))
+        self.assertEqual(five.times(3), Money.franc(15))
 
     def test_equality(self):
         self.assertTrue(Money.dollar(5) == Money.dollar(5))
