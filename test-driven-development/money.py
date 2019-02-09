@@ -29,7 +29,7 @@ class Money(object):
         return self.currency_code
 
     def __eq__(self, other):
-        return self.amount == other.amount and self.__class__ == other.__class__
+        return self.amount == other.amount and self.currency_code == other.currency_code
 
     @staticmethod
     def dollar(amount):
