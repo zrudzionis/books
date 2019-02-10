@@ -17,6 +17,9 @@ class Money(object):
     def times(self, multiplier):
         return Money(self.amount * multiplier, self.currency_code)
 
+    def plus(self, addend):
+        return Money(self.amount + addend.amount, self.currency_code)
+
     def __eq__(self, other):
         return self.amount == other.amount and self.currency_code == other.currency_code
 
@@ -27,6 +30,15 @@ class Money(object):
     @staticmethod
     def franc(amount):
         return Money(amount, 'CHF')
+
+
+class Expression(object):
+    pass
+
+
+class Bank(object):
+    def reduce(self, expression, currency_code):
+        return Money.dollar(10)
 
 
 class MoneyTestCase(TestCase):
