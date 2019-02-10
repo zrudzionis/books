@@ -36,19 +36,11 @@ class Money(object):
 
     @staticmethod
     def dollar(amount):
-        return Dollar(amount, 'USD')
+        return Money(amount, 'USD')
 
     @staticmethod
     def franc(amount):
-        return Franc(amount, 'CHF')
-
-
-class Dollar(Money):
-    pass
-
-
-class Franc(Money):
-    pass
+        return Money(amount, 'CHF')
 
 
 class MoneyTestCase(TestCase):
@@ -65,13 +57,8 @@ class MoneyTestCase(TestCase):
     def test_equality(self):
         self.assertTrue(Money.dollar(5) == Money.dollar(5))
         self.assertFalse(Money.dollar(5) == Money.dollar(6))
-        self.assertTrue(Money.franc(5) == Money.franc(5))
-        self.assertFalse(Money.franc(5) == Money.franc(6))
         self.assertFalse(Money.dollar(5) == Money.franc(5))
 
     def test_currency(self):
         self.assertEqual(Money.dollar(1).currency(), 'USD')
         self.assertEqual(Money.franc(1).currency(), 'CHF')
-
-    def test_different_class_equality(self):
-        self.assertEqual(Money(2, 'CHF'), Franc(2, 'CHF'))
