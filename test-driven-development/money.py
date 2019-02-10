@@ -43,3 +43,7 @@ class MoneyTestCase(TestCase):
     def test_currency(self):
         self.assertEqual(Money.dollar(1).currency(), 'USD')
         self.assertEqual(Money.franc(1).currency(), 'CHF')
+
+    def test_simple_addition(self):
+        s = Money.dollar(5).plus(Money.dollar(5))
+        self.assertEqual(s, Money.dollar(10))
