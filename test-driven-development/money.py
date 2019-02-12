@@ -1,6 +1,7 @@
 """
 $5 + 10 CHF = $10 if rate is 2:1
 ------------> $5 + $5 = $10
+Return Money from $5 + $5
 """
 
 from unittest import TestCase
@@ -62,3 +63,9 @@ class MoneyTestCase(TestCase):
         bank = Bank()
         reduced = bank.reduce(s, 'USD')
         self.assertEqual(reduced, Money.dollar(10))
+
+    def test_plus_returns_sum(self):
+        five = Money.dollar(5)
+        s = five.plus(five)
+        self.assertEqual(s.augend, five)
+        self.assertEqual(s.addend, five)
