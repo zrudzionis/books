@@ -44,8 +44,9 @@ class Sum(object):
 
 
 class Bank(object):
-    def reduce(self, expression, currency_code):
-        return Money.dollar(10)
+    def reduce(self, expression, target_currency_code):
+        amount = expression.augend.amount + expression.addend.amount
+        return Money(amount, target_currency_code)
 
 
 class MoneyTestCase(TestCase):
