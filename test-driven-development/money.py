@@ -19,7 +19,7 @@ class Money(object):
         return Money(self.amount * multiplier, self.currency_code)
 
     def plus(self, addend):
-        return Money(self.amount + addend.amount, self.currency_code)
+        return Sum(self, addend)
 
     def __eq__(self, other):
         return self.amount == other.amount and self.currency_code == other.currency_code
@@ -35,6 +35,12 @@ class Money(object):
 
 class Expression(object):
     pass
+
+
+class Sum(object):
+    def __init__(self, augend, addend):
+        self.augend = augend
+        self.addend = addend
 
 
 class Bank(object):
