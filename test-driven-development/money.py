@@ -61,17 +61,19 @@ class Sum(Expression):
 
 
 class Bank(object):
+    def __init__(self):
+        self.rates = dict()
+
     def reduce(self, expression, currency_code):
         return expression.reduce(self, currency_code)
 
-    @staticmethod
-    def rate(from_currency_code, to_currency_code):
-        if from_currency_code == 'CHF' and to_currency_code == 'USD':
-            return 2
-        return 1
+    def rate(self, from_currency_code, to_currency_code):
+        k = (from_currency_code, to_currency_code)
+        return self.rates.get(k, 1)
 
-    def add_rate(self, source_currency_code, target_currency_rate, rate):
-        pass
+    def add_rate(self, from_currency_code, to_currency_rate, rate):
+        k = (from_currency_code, to_currency_rate)
+        self.rates[k] = rate
 
 
 class MoneyTestCase(TestCase):
