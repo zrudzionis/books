@@ -8,9 +8,16 @@ Reduce(Bank, String)
 """
 
 from unittest import TestCase
+from abc import abstractmethod
 
 
-class Money(object):
+class Expression(object):
+    @abstractmethod
+    def reduce(self, bank, to_currency_code):
+        raise NotImplementedError
+
+
+class Money(Expression):
     def __init__(self, amount, currency_code):
         self.amount = amount
         self.currency_code = currency_code
@@ -24,10 +31,9 @@ class Money(object):
     def plus(self, addend):
         return Sum(self, addend)
 
-    def reduce(self, currency_code):
-        if self.currency_code == 'CHF' and currency_code == 'USD':
-            return Money.dollar(self.amount/2)
-        return self
+    def reduce(self, bank, to_currency_code):
+        rate = bank.rate(self.currency_code, to_currency_code)
+        return Money(self.amount/rate, to_currency_code)
 
     def __eq__(self, other):
         return self.amount == other.amount and self.currency_code == other.currency_code
@@ -44,23 +50,25 @@ class Money(object):
         return Money(amount, 'CHF')
 
 
-class Expression(object):
-    pass
-
-
-class Sum(object):
+class Sum(Expression):
     def __init__(self, augend, addend):
         self.augend = augend
         self.addend = addend
 
-    def reduce(self, currency_code):
+    def reduce(self, bank, currency_code):
         amount = self.augend.amount + self.addend.amount
         return Money(amount, currency_code)
 
 
 class Bank(object):
     def reduce(self, expression, currency_code):
-        return expression.reduce(currency_code)
+        return expression.reduce(self, currency_code)
+
+    @staticmethod
+    def rate(from_currency_code, to_currency_code):
+        if from_currency_code == 'CHF' and to_currency_code == 'USD':
+            return 2
+        return 1
 
     def add_rate(self, source_currency_code, target_currency_rate, rate):
         pass
