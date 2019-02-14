@@ -120,3 +120,7 @@ class MoneyTestCase(TestCase):
         bank.add_rate('CHF', 'USD', 2)
         result = bank.reduce(Money.franc(2), 'USD')
         self.assertEqual(result, Money.dollar(1))
+
+    def test_identity_rate(self):
+        bank = Bank()
+        self.assertEqual(bank.rate('USD', 'USD'), 1)
