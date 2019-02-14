@@ -49,6 +49,8 @@ class Sum(object):
 
 class Bank(object):
     def reduce(self, expression, currency_code):
+        if isinstance(expression, Money):
+            return expression
         return expression.reduce(currency_code)
 
 
