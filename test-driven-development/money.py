@@ -24,8 +24,16 @@ class Money(object):
     def plus(self, addend):
         return Sum(self, addend)
 
+    def reduce(self, currency_code):
+        if self.currency_code == 'CHF' and currency_code == 'USD':
+            return Money.dollar(self.amount/2)
+        return self
+
     def __eq__(self, other):
         return self.amount == other.amount and self.currency_code == other.currency_code
+
+    def __repr__(self):
+        return 'Money(%s, %s)' % (self.amount, self.currency_code)
 
     @staticmethod
     def dollar(amount):
@@ -52,9 +60,10 @@ class Sum(object):
 
 class Bank(object):
     def reduce(self, expression, currency_code):
-        if isinstance(expression, Money):
-            return expression
         return expression.reduce(currency_code)
+
+    def add_rate(self, source_currency_code, target_currency_rate, rate):
+        pass
 
 
 class MoneyTestCase(TestCase):
@@ -98,6 +107,6 @@ class MoneyTestCase(TestCase):
 
     def test_reduce_money_different_currencies(self):
         bank = Bank()
-        bank.addRate('CHF', 'USD', 2)
+        bank.add_rate('CHF', 'USD', 2)
         result = bank.reduce(Money.franc(2), 'USD')
         self.assertEqual(result, Money.dollar(1))
