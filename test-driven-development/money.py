@@ -64,8 +64,8 @@ class Bank(object):
     def __init__(self):
         self.rates = dict()
 
-    def reduce(self, expression, currency_code):
-        return expression.reduce(self, currency_code)
+    def reduce(self, expression, to_currency_code):
+        return expression.reduce(self, to_currency_code)
 
     def rate(self, from_currency_code, to_currency_code):
         k = (from_currency_code, to_currency_code)
@@ -124,3 +124,11 @@ class MoneyTestCase(TestCase):
     def test_identity_rate(self):
         bank = Bank()
         self.assertEqual(bank.rate('USD', 'USD'), 1)
+
+    def test_mixed_addition(self):
+        five_bucks = Money.dollar(5)
+        ten_francs = Money.franc(10)
+        bank = Bank()
+        bank.add_rate('CHF', 'USD', 2)
+        result = bank.reduce(five_bucks.plus(ten_francs), 'USD')
+        self.assertEqual(Money.dollar(10), result)
