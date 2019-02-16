@@ -68,7 +68,7 @@ class Sum(Expression):
         return Money(amount, currency_code)
 
     def plus(self, addend):
-        raise NotImplementedError
+        return Sum(self, addend)
 
 
 class Bank(object):
@@ -150,6 +150,5 @@ class MoneyTestCase(TestCase):
         bank = Bank()
         bank.add_rate('CHF', 'USD', 2)
         s = Sum(five_bucks, ten_francs).plus(five_bucks)
-        bank = Bank()
         result = bank.reduce(s, 'USD')
         self.assertEqual(result, Money.dollar(15))
