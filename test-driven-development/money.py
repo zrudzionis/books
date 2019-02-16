@@ -22,6 +22,10 @@ class Expression(object):
     def plus(self, addend):
         raise NotImplementedError
 
+    @abstractmethod
+    def times(self, multiplier):
+        raise NotImplementedError
+
 
 class Money(Expression):
     def __init__(self, amount, currency_code):
@@ -69,6 +73,11 @@ class Sum(Expression):
 
     def plus(self, addend):
         return Sum(self, addend)
+
+    def times(self, multiplier):
+        augend = self.augend.times(multiplier)
+        addend = self.addend.times(multiplier)
+        return Sum(augend, addend)
 
 
 class Bank(object):
