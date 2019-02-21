@@ -3,10 +3,10 @@
 1. [Object-Oriented Design](object-oriented-design.md)
 2. [Designing Classes with a Single Responsibility](designing-classes-with-srp.md)
 3. [Managing Dependencies](managing-dependencies.md)
+4. [Creating Flexible Interfaces](creating-flexible-interfaces.md)
 
 
 TODO
-4. [Creating Flexible Interfaces]()
 5. [Reducing Costs with Duck Typing]()
 6. [Acquiring behavior Through Inheritance]() 
 7. [Sharing Role Behavior with Modules]()
