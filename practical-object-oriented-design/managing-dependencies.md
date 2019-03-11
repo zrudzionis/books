@@ -25,6 +25,11 @@ it's the message you plan to send to it."
 * Isolate instance creation
 * Isolate vulnerable external messages
 #### Remove Argument-Order Dependencies
+If you use duck typing you pass object 
+to method and then method send message to that 
+object. Using keyword arguments is like 
+duck typing but for data.
+
 * Use keyword arguments instead of positional ones
 * Explicitly define defaults
 * Use wrapping method to isolate external dependencies
