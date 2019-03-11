@@ -8,7 +8,7 @@
 
 
 TODO
-6. [Acquiring behavior Through Inheritance]() 
-7. [Sharing Role Behavior with Modules]()
-8. [Combining Objects with Composition]()
+6. [Acquiring behavior Through Inheritance](acquiring-behavior-through-inheritance.md)
+7. [Sharing Role Behavior with Modules](sharing-role-behavior-with-modules.md)
+8. [Combining Objects with Composition](combining-objects-with-composition.md)
 9. [Designing Cost-Effective Tests]()
