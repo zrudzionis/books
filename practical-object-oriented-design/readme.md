@@ -4,10 +4,10 @@
 2. [Designing Classes with a Single Responsibility](designing-classes-with-srp.md)
 3. [Managing Dependencies](managing-dependencies.md)
 4. [Creating Flexible Interfaces](creating-flexible-interfaces.md)
+5. [Reducing Costs with Duck Typing](reducing-costs-with-duck-typing.md)
 
 
 TODO
-5. [Reducing Costs with Duck Typing]()
 6. [Acquiring behavior Through Inheritance]() 
 7. [Sharing Role Behavior with Modules]()
 8. [Combining Objects with Composition]()
