@@ -7,7 +7,7 @@
 5. [Reducing Costs with Duck Typing](reducing-costs-with-duck-typing.md)
 6. [Acquiring Behavior Through Inheritance](acquiring-behavior-through-inheritance.md)
 7. [Sharing Role Behavior with Modules](sharing-role-behavior-with-modules.md)
+8. [Combining Objects with Composition](combining-objects-with-composition.md)
 
 TODO
-8. [Combining Objects with Composition](combining-objects-with-composition.md)
 9. [Designing Cost-Effective Tests]()
